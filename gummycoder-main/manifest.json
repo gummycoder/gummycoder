@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "GummyCoder",
+  "version": "2.0.0",
+  "description": "GummyCoder - Your browser game hub.",
+  "action": {
+    "default_title": "GummyCoder",
+    "default_popup": "main.html",
+    "default_icon": {
+      "16": "Image.png",
+      "32": "Image.png",
+      "48": "Image.png",
+      "128": "Image.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "Image.png",
+    "32": "Image.png",
+    "48": "Image.png",
+    "128": "Image.png"
+  }
+}

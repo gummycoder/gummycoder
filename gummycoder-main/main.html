@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="GummyCoder Game Hub"
+    >
+
+    <title>GummyCoder — Game Hub</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <img
+                    src="Image.png"
+                    alt="GummyCoder"
+                >
+
+                <div class="logo-text">
+                    <strong>GummyCoder</strong>
+                    <span>GAME HUB</span>
+                </div>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <button
+                    class="nav-item active"
+                    data-page="home"
+                    type="button"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span>Home</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="games"
+                    type="button"
+                >
+                    <span class="nav-icon">🎮</span>
+                    <span>All Games</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="favorites"
+                    type="button"
+                >
+                    <span class="nav-icon">★</span>
+                    <span>Favorites</span>
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-title">
+                    CATEGORIES
+                </div>
+
+
+                <button
+                    class="category-item"
+                    data-category="Action"
+                    type="button"
+                >
+                    ⚔️
+                    <span>Action</span>
+                </button>
+
+
+                <button
+                    class="category-item"
+                    data-category="Arcade"
+                    type="button"
+                >
+                    👾
+                    <span>Arcade</span>
+                </button>
+
+
+                <button
+                    class="category-item"
+                    data-category="Racing"
+                    type="button"
+                >
+                    🏎️
+                    <span>Racing</span>
+                </button>
+
+
+                <button
+                    class="category-item"
+                    data-category="Puzzle"
+                    type="button"
+                >
+                    🧩
+                    <span>Puzzle</span>
+                </button>
+
+
+                <button
+                    class="category-item"
+                    data-category="Sports"
+                    type="button"
+                >
+                    🏀
+                    <span>Sports</span>
+                </button>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <button
+                    id="settingsButton"
+                    class="nav-item"
+                    type="button"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <div class="content">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div class="mobile-logo">
+
+                    <img
+                        src="Image.png"
+                        alt="GummyCoder"
+                    >
+
+                    <strong>
+                        GummyCoder
+                    </strong>
+
+                </div>
+
+
+                <div class="search">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        id="searchInput"
+                        type="search"
+                        placeholder="Search games..."
+                        autocomplete="off"
+                    >
+
+                    <kbd>
+                        /
+                    </kbd>
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+                    <button
+                        id="themeButton"
+                        class="topbar-button"
+                        type="button"
+                        title="Change theme"
+                    >
+                        ◐
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 HOME PAGE
+            ========================== -->
+
+            <main
+                id="homePage"
+                class="page active"
+            >
+
+                <!-- Hero -->
+
+                <section class="hero">
+
+                    <div class="hero-content">
+
+                        <span class="hero-label">
+                            🎮 GUMMYCODER HUB
+                        </span>
+
+                        <h1>
+                            Play something
+                            <span>awesome.</span>
+                        </h1>
+
+                        <p>
+                            Discover games, save your favorites,
+                            and jump straight into the action.
+                        </p>
+
+                        <button
+                            id="browseButton"
+                            class="hero-button"
+                            type="button"
+                        >
+                            Browse Games
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Featured -->
+
+                <section class="section">
+
+                    <div class="section-header">
+
+                        <div>
+                            <span class="section-label">
+                                FEATURED
+                            </span>
+
+                            <h2>
+                                Featured Games
+                            </h2>
+                        </div>
+
+                        <button
+                            class="view-all"
+                            data-page="games"
+                            type="button"
+                        >
+                            View all →
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="featuredGames"
+                        class="game-grid"
+                    >
+                        <!-- Games inserted by main.js -->
+                    </div>
+
+                </section>
+
+
+                <!-- Categories -->
+
+                <section class="section">
+
+                    <div class="section-header">
+
+                        <div>
+                            <span class="section-label">
+                                EXPLORE
+                            </span>
+
+                            <h2>
+                                Categories
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-grid">
+
+                        <button
+                            class="category-card category-action"
+                            data-category="Action"
+                            type="button"
+                        >
+                            <span>⚔️</span>
+                            <strong>Action</strong>
+                            <small>Fast & intense</small>
+                        </button>
+
+
+                        <button
+                            class="category-card category-arcade"
+                            data-category="Arcade"
+                            type="button"
+                        >
+                            <span>👾</span>
+                            <strong>Arcade</strong>
+                            <small>Classic fun</small>
+                        </button>
+
+
+                        <button
+                            class="category-card category-racing"
+                            data-category="Racing"
+                            type="button"
+                        >
+                            <span>🏎️</span>
+                            <strong>Racing</strong>
+                            <small>Full speed</small>
+                        </button>
+
+
+                        <button
+                            class="category-card category-puzzle"
+                            data-category="Puzzle"
+                            type="button"
+                        >
+                            <span>🧩</span>
+                            <strong>Puzzle</strong>
+                            <small>Test your brain</small>
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+
+            <!-- =========================
+                 ALL GAMES PAGE
+            ========================== -->
+
+            <main
+                id="gamesPage"
+                class="page"
+            >
+
+                <section class="page-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            LIBRARY
+                        </span>
+
+                        <h1>
+                            All Games
+                        </h1>
+
+                        <p>
+                            Browse the complete GummyCoder library.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <div
+                    id="allGames"
+                    class="game-grid"
+                >
+                    <!-- Games inserted by main.js -->
+                </div>
+
+            </main>
+
+
+            <!-- =========================
+                 FAVORITES PAGE
+            ========================== -->
+
+            <main
+                id="favoritesPage"
+                class="page"
+            >
+
+                <section class="page-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            YOUR LIBRARY
+                        </span>
+
+                        <h1>
+                            Favorites
+                        </h1>
+
+                        <p>
+                            Games you've saved for later.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <div
+                    id="favoriteGames"
+                    class="game-grid"
+                >
+                    <!-- Games inserted by main.js -->
+                </div>
+
+
+                <div
+                    id="emptyFavorites"
+                    class="empty-state hidden"
+                >
+
+                    <div class="empty-icon">
+                        ☆
+                    </div>
+
+                    <h2>
+                        No favorites yet
+                    </h2>
+
+                    <p>
+                        Click the star on a game to add it
+                        to your favorites.
+                    </p>
+
+                    <button
+                        id="emptyBrowseButton"
+                        class="hero-button"
+                        type="button"
+                    >
+                        Browse Games
+                    </button>
+
+                </div>
+
+            </main>
+
+
+            <!-- =========================
+                 CATEGORY PAGE
+            ========================== -->
+
+            <main
+                id="categoryPage"
+                class="page"
+            >
+
+                <section class="page-heading">
+
+                    <div>
+
+                        <span
+                            id="categoryLabel"
+                            class="section-label"
+                        >
+                            CATEGORY
+                        </span>
+
+                        <h1 id="categoryTitle">
+                            Games
+                        </h1>
+
+                        <p id="categoryDescription">
+                            Browse games in this category.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <div
+                    id="categoryGames"
+                    class="game-grid"
+                >
+                    <!-- Games inserted by main.js -->
+                </div>
+
+            </main>
+
+
+            <!-- =========================
+                 GAME PLAYER
+            ========================== -->
+
+            <main
+                id="playerPage"
+                class="page player-page"
+            >
+
+                <div class="player-header">
+
+                    <button
+                        id="backToGames"
+                        class="back-button"
+                        type="button"
+                    >
+                        ← Back
+                    </button>
+
+
+                    <div class="player-title">
+
+                        <span id="playerCategory">
+                            GAME
+                        </span>
+
+                        <h1 id="playerName">
+                            Game
+                        </h1>
+
+                    </div>
+
+
+                    <button
+                        id="playerFavorite"
+                        class="favorite-button"
+                        type="button"
+                        title="Add to favorites"
+                    >
+                        ☆
+                    </button>
+
+                </div>
+
+
+                <div class="player-container">
+
+                    <iframe
+                        id="playerFrame"
+                        title="Game"
+                        allow="fullscreen; autoplay"
+                    ></iframe>
+
+                </div>
+
+
+                <div class="player-footer">
+
+                    <div>
+
+                        <h2 id="playerDescription">
+                            Game description
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="reloadGame"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        ↻ Reload
+                    </button>
+
+                </div>
+
+            </main>
+
+
+            <!-- =========================
+                 SETTINGS PAGE
+            ========================== -->
+
+            <main
+                id="settingsPage"
+                class="page"
+            >
+
+                <section class="page-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            PREFERENCES
+                        </span>
+
+                        <h1>
+                            Settings
+                        </h1>
+
+                        <p>
+                            Customize your GummyCoder experience.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section class="settings-card">
+
+                    <div class="setting">
+
+                        <div class="setting-text">
+
+                            <strong>
+                                Dark Mode
+                            </strong>
+
+                            <span>
+                                Use the dark GummyCoder interface.
+                            </span>
+
+                        </div>
+
+
+                        <label class="switch">
+
+                            <input
+                                id="darkModeToggle"
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting">
+
+                        <div class="setting-text">
+
+                            <strong>
+                                Confirm before leaving
+                            </strong>
+
+                            <span>
+                                Ask before navigating away from a game.
+                            </span>
+
+                        </div>
+
+
+                        <label class="switch">
+
+                            <input
+                                id="confirmExitToggle"
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="games/games.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
